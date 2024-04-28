@@ -4,21 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="" />
+    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="Creada una vista básica principal que servirá para empezar con la lógica de la calculadora">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/CalculadoraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/CalculadoraController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "pbl99"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="70b4e42a-209c-465d-bf3e-141186ab76e5" />
+        <option name="url" value="https://github.com/pbl99/AplicacionCalculadora" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Pablo/Desktop/JavaFX/AplicacionCalculadora",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\java\com\palmen\aplicacioncalculadora" />
@@ -82,6 +106,30 @@
       <option name="presentableId" value="Default" />
       <updated>1714290673123</updated>
     </task>
+    <task id="LOCAL-00001" summary="Creada una vista básica principal que servirá para empezar con la lógica de la calculadora">
+      <option name="closed" value="true" />
+      <created>1714292816572</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714292816572</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creada una vista básica principal que servirá para empezar con la lógica de la calculadora" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creada una vista básica principal que servirá para empezar con la lógica de la calculadora" />
   </component>
 </project>
