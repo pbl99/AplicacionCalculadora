@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\java\com\palmen\aplicacioncalculadora" />
+      <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\resources\com\palmen\aplicacioncalculadora" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CalculadoraApplication">
+    <configuration name="CalculadoraApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.CalculadoraApplication" />
+      <module name="AplicacionCalculadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.aplicacioncalculadora.HelloApplication" />
+      <module name="AplicacionCalculadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.aplicacioncalculadora.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.palmen.aplicacioncalculadora.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.HelloApplication" />
+      <module name="AplicacionCalculadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CalculadoraApplication" />
+        <item itemvalue="Application.com.palmen.aplicacioncalculadora.HelloApplication" />
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="" />
+      <created>1714290673123</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1714290673123</updated>
+    </task>
+    <servers />
+  </component>
+</project>
