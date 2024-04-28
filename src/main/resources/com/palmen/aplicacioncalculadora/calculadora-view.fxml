@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="406.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.palmen.aplicacioncalculadora.CalculadoraController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="406.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.palmen.aplicacioncalculadora.controllers.CalculadoraController">
    <children>
       <HBox prefHeight="78.0" prefWidth="406.0" style="-fx-background-color: #505050;">
          <children>
@@ -111,7 +111,7 @@
       </VBox>
       <VBox layoutX="300.0" layoutY="78.0" prefHeight="200.0" prefWidth="100.0">
          <children>
-            <Button fx:id="BtnBorrar" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="CE" textFill="#9588fc">
+            <Button fx:id="btnBorrar" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="CE" textFill="#9588fc">
                <VBox.margin>
                   <Insets left="15.0" top="10.0" />
                </VBox.margin>

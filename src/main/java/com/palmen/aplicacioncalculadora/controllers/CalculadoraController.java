@@ -1,4 +1,4 @@
-package com.palmen.aplicacioncalculadora;
+package com.palmen.aplicacioncalculadora.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class CalculadoraController {
     @FXML
-    private Button BtnBorrar;
+    private Button btnBorrar;
 
     @FXML
     private Button btnDivision;
@@ -75,6 +75,8 @@ public class CalculadoraController {
     private void initialize() {
         ponerNumeros();
         controlarBotonesOperadores();
+        calculos();
+        borrarCaracteres();
     }
 
     //Procedimiento para poner los numeros en el visor de la calculadora (lblResultado)
@@ -114,5 +116,43 @@ public class CalculadoraController {
                 }
             });
         }
+    }
+
+    //Procedimiento de prueba que comprueba si se pulsa el botón(btnIgualResultado) y utiliza las operaciones para dar el resultado
+    public void calculos() {
+        btnIgualResultado.setOnMouseClicked(e -> {
+            lblResultado.setText(sumaCalculo());
+        });
+    }
+
+    //Método para la operación de suma
+    public String sumaCalculo() {
+        String resultadoLabel = "";
+        String textoResultado = lblResultado.getText().trim();
+        String[] partes = textoResultado.split("\\+");
+        int suma = 0;
+
+        for (String parte : partes) {
+            parte = parte.trim();
+            if (!parte.isEmpty()) {
+                suma += Integer.parseInt(parte);
+            }
+        }
+        resultadoLabel = String.valueOf(suma);
+
+        return resultadoLabel;
+    }
+
+
+    //Procedimiento asociado al botón(btnBorrar) para borrar caracteres
+    public void borrarCaracteres() {
+        btnBorrar.setOnMouseClicked(e -> {
+            String textoActual = lblResultado.getText();
+            if (!textoActual.isEmpty()) {
+                // Borra el último carácter de la expresión actual
+                textoActual = textoActual.substring(0, textoActual.length() - 1);
+                lblResultado.setText(textoActual);
+            }
+        });
     }
 }
