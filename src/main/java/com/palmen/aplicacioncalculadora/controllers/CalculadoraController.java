@@ -1,5 +1,6 @@
 package com.palmen.aplicacioncalculadora.controllers;
 
+import com.palmen.aplicacioncalculadora.services.CalculadoraService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -71,12 +72,40 @@ public class CalculadoraController {
     @FXML
     private Label lblResultado;
 
+    private CalculadoraService calculadoraService;
+
+    private String operacionActual; // Variable para almacenar la operación actual
+
     @FXML
     private void initialize() {
+        calculadoraService = new CalculadoraService();
+        operacionActual = "";
         ponerNumeros();
         controlarBotonesOperadores();
-        calculos();
+        //calculos();
         borrarCaracteres();
+    }
+
+    // Métodos para manejar los eventos de los botones de operación (suma, resta, etc.)
+    @FXML
+    private void handleBotonSuma() {
+        operacionActual = "suma";
+    }
+
+    @FXML
+    private void handleBotonResta() {
+        operacionActual = "resta";
+    }
+
+    // Método para realizar la operación cuando se presiona el botón igual
+    @FXML
+    private void handleBotonIgual() {
+        if (operacionActual.equals("suma")) {
+            lblResultado.setText(calculadoraService.sumaCalculo(lblResultado));
+        } else if (operacionActual.equals("resta")) {
+            lblResultado.setText(calculadoraService.restaCalculo(lblResultado));
+        }
+        // Aquí podrías manejar otras operaciones (multiplicación, división, etc.) si es necesario
     }
 
     //Procedimiento para poner los numeros en el visor de la calculadora (lblResultado)
@@ -117,32 +146,6 @@ public class CalculadoraController {
             });
         }
     }
-
-    //Procedimiento de prueba que comprueba si se pulsa el botón(btnIgualResultado) y utiliza las operaciones para dar el resultado
-    public void calculos() {
-        btnIgualResultado.setOnMouseClicked(e -> {
-            lblResultado.setText(sumaCalculo());
-        });
-    }
-
-    //Método para la operación de suma
-    public String sumaCalculo() {
-        String resultadoLabel = "";
-        String textoResultado = lblResultado.getText().trim();
-        String[] partes = textoResultado.split("\\+");
-        int suma = 0;
-
-        for (String parte : partes) {
-            parte = parte.trim();
-            if (!parte.isEmpty()) {
-                suma += Integer.parseInt(parte);
-            }
-        }
-        resultadoLabel = String.valueOf(suma);
-
-        return resultadoLabel;
-    }
-
 
     //Procedimiento asociado al botón(btnBorrar) para borrar caracteres
     public void borrarCaracteres() {

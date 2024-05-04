@@ -102,7 +102,7 @@
                   <Insets left="15.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnIgualResultado" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="=" textFill="#9588fc">
+            <Button fx:id="btnIgualResultado" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="=" textFill="#9588fc" onAction="#handleBotonIgual">
                <VBox.margin>
                   <Insets left="15.0" top="10.0" />
                </VBox.margin>
@@ -126,12 +126,12 @@
                   <Insets left="15.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnResta" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="-" textFill="#9588fc">
+            <Button fx:id="btnResta" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="-" textFill="#9588fc" onAction="#handleBotonResta">
                <VBox.margin>
                   <Insets left="15.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnSuma" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="+" textFill="#9588fc">
+            <Button fx:id="btnSuma" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="+" textFill="#9588fc" onAction="#handleBotonSuma">
                <VBox.margin>
                   <Insets left="15.0" top="10.0" />
                </VBox.margin>
