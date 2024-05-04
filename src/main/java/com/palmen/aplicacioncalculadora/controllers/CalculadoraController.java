@@ -97,6 +97,16 @@ public class CalculadoraController {
         operacionActual = "resta";
     }
 
+    @FXML
+    private void handleBotonMultiplica() {
+        operacionActual = "multiplica";
+    }
+
+    @FXML
+    private void handleBotonDivide() {
+        operacionActual = "divide";
+    }
+
     // Método para realizar la operación cuando se presiona el botón igual
     @FXML
     private void handleBotonIgual() {
@@ -104,6 +114,10 @@ public class CalculadoraController {
             lblResultado.setText(calculadoraService.sumaCalculo(lblResultado));
         } else if (operacionActual.equals("resta")) {
             lblResultado.setText(calculadoraService.restaCalculo(lblResultado));
+        } else if (operacionActual.equals("multiplica")) {
+            lblResultado.setText(calculadoraService.multiplicaCalculo(lblResultado));
+        } else if (operacionActual.equals("divide")) {
+            lblResultado.setText(calculadoraService.divideCalculo(lblResultado));
         }
         // Aquí podrías manejar otras operaciones (multiplicación, división, etc.) si es necesario
     }

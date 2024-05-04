@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="Creo los paquetes controllers para mover el controloador el services ya que sacaré la lógica de las operaciones del controlador principal y en este he creado varios procedimientos y métodos de prueba nuevos">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="Añado los métodos nuevos al CalculadoraService para controlar la lógica de las operaciones matemáticas de momento solo se ha implementado suma y resta, y se añade manejadores de botones al controller sustituyendo al método calculos anterior.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/services/CalculadoraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/services/CalculadoraService.java" afterDir="false" />
@@ -51,18 +49,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CalculadoraApplication.executor": "Run",
-    "Application.Prueba.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Pablo/Desktop/JavaFX/AplicacionCalculadora",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CalculadoraApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Prueba.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pablo/Desktop/JavaFX/AplicacionCalculadora&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\java\com\palmen\aplicacioncalculadora" />
@@ -164,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714297041678</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Añado los métodos nuevos al CalculadoraService para controlar la lógica de las operaciones matemáticas de momento solo se ha implementado suma y resta, y se añade manejadores de botones al controller sustituyendo al método calculos anterior.">
+      <option name="closed" value="true" />
+      <created>1714825616935</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714825616935</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,6 +188,7 @@
     <MESSAGE value="Creada una vista básica principal que servirá para empezar con la lógica de la calculadora" />
     <MESSAGE value="Creo tres procedimientos uno de @FXML para poder inicializar métodos.. y los procedimientos ponerNumeros y controlarBotonesOperadores" />
     <MESSAGE value="Creo los paquetes controllers para mover el controloador el services ya que sacaré la lógica de las operaciones del controlador principal y en este he creado varios procedimientos y métodos de prueba nuevos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creo los paquetes controllers para mover el controloador el services ya que sacaré la lógica de las operaciones del controlador principal y en este he creado varios procedimientos y métodos de prueba nuevos" />
+    <MESSAGE value="Añado los métodos nuevos al CalculadoraService para controlar la lógica de las operaciones matemáticas de momento solo se ha implementado suma y resta, y se añade manejadores de botones al controller sustituyendo al método calculos anterior." />
+    <option name="LAST_COMMIT_MESSAGE" value="Añado los métodos nuevos al CalculadoraService para controlar la lógica de las operaciones matemáticas de momento solo se ha implementado suma y resta, y se añade manejadores de botones al controller sustituyendo al método calculos anterior." />
   </component>
 </project>
