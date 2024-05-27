@@ -1,6 +1,7 @@
 module com.example.aplicacioncalculadora {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
 
     opens com.palmen.aplicacioncalculadora to javafx.fxml;

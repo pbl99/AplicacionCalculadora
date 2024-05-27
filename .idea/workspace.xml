@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="Añado los métodos para multiplicar y dividir a la calculadora service y en el controller los manejadores de sus respectivos botones">
+    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="CalculadoraService -&gt; modifico método calcular para que por defecto sea Double,añado método formatearResultado para trabajar con los decimales y ese método entra en los métodos de los calculos.&#10;&#10;CalculadoraController -&gt; el método hableBotonIgual pasa a ser con Switch y se crea un método para controlar los botonesEspeciales">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/CalculadoraApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/CalculadoraApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/services/CalculadoraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/services/CalculadoraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/palmen/aplicacioncalculadora/calculadora-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/palmen/aplicacioncalculadora/calculadora-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +65,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\resources\img" />
+      <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\resources" />
       <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\java\com\palmen\aplicacioncalculadora" />
       <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\resources\com\palmen\aplicacioncalculadora" />
     </key>
@@ -177,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714826840805</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="CalculadoraService -&gt; modifico método calcular para que por defecto sea Double,añado método formatearResultado para trabajar con los decimales y ese método entra en los métodos de los calculos.&#10;&#10;CalculadoraController -&gt; el método hableBotonIgual pasa a ser con Switch y se crea un método para controlar los botonesEspeciales">
+      <option name="closed" value="true" />
+      <created>1714899365435</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714899365435</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +210,18 @@
     <MESSAGE value="Creo los paquetes controllers para mover el controloador el services ya que sacaré la lógica de las operaciones del controlador principal y en este he creado varios procedimientos y métodos de prueba nuevos" />
     <MESSAGE value="Añado los métodos nuevos al CalculadoraService para controlar la lógica de las operaciones matemáticas de momento solo se ha implementado suma y resta, y se añade manejadores de botones al controller sustituyendo al método calculos anterior." />
     <MESSAGE value="Añado los métodos para multiplicar y dividir a la calculadora service y en el controller los manejadores de sus respectivos botones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añado los métodos para multiplicar y dividir a la calculadora service y en el controller los manejadores de sus respectivos botones" />
+    <MESSAGE value="CalculadoraService -&gt; modifico método calcular para que por defecto sea Double,añado método formatearResultado para trabajar con los decimales y ese método entra en los métodos de los calculos.&#10;&#10;CalculadoraController -&gt; el método hableBotonIgual pasa a ser con Switch y se crea un método para controlar los botonesEspeciales" />
+    <option name="LAST_COMMIT_MESSAGE" value="CalculadoraService -&gt; modifico método calcular para que por defecto sea Double,añado método formatearResultado para trabajar con los decimales y ese método entra en los métodos de los calculos.&#10;&#10;CalculadoraController -&gt; el método hableBotonIgual pasa a ser con Switch y se crea un método para controlar los botonesEspeciales" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

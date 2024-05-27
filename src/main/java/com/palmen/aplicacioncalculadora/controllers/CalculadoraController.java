@@ -4,7 +4,10 @@ import com.palmen.aplicacioncalculadora.services.CalculadoraService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -71,6 +74,21 @@ public class CalculadoraController {
 
     @FXML
     private Label lblResultado;
+
+    @FXML
+    private Label lblCerrarApp;
+
+    @FXML
+    private Label lblMinimizarApp;
+
+    @FXML
+    private AnchorPane anchorPane;
+
+    private Stage stage;
+
+    private double xOffset = 0;
+
+    private double yOffset = 0;
 
     private CalculadoraService calculadoraService;
 
@@ -184,6 +202,25 @@ public class CalculadoraController {
                 textoActual = textoActual.substring(0, textoActual.length() - 1);
                 lblResultado.setText(textoActual);
             }
+        });
+    }
+
+    //Procedimiento para la lógica que afectará al movimiento de la aplicación y los labels que usaremos para minimizar y cerrar
+    public void setStage(Stage stage) {
+        this.stage = stage;
+
+        // Inicializar los controladores de botones
+        lblCerrarApp.setOnMouseClicked(event -> stage.close());
+        lblMinimizarApp.setOnMouseClicked(event -> stage.setIconified(true));
+
+        // Hacer que la ventana sea arrastrable
+        anchorPane.setOnMousePressed(event -> {
+            xOffset = event.getSceneX();
+            yOffset = event.getSceneY();
+        });
+        anchorPane.setOnMouseDragged(event -> {
+            stage.setX(event.getScreenX() - xOffset);
+            stage.setY(event.getScreenY() - yOffset);
         });
     }
 }
