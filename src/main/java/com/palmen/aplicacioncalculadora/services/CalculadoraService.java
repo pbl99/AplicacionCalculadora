@@ -5,43 +5,29 @@ import javafx.scene.control.Label;
 import java.util.Locale;
 
 public class CalculadoraService {
-
-    //Método sumaCalculo que utiliza al método calcular para generar el resultado del label
-    public String sumaCalculo(Label lblResultado) {
+    //Método calculo operación que utiliza al método calcular para generar el resultado del label
+    public String calcularOperacion(Label lblResultado) {
         String resultadoLabel;
         String textoResultado = lblResultado.getText().trim();
-        Double suma = calcular(textoResultado);
-        resultadoLabel = formatearResultado(suma);
-        return resultadoLabel;
-    }
-
-    //Método restaCalculo que utiliza al método calcular para generar el resultado del label
-    public String restaCalculo(Label lblResultado) {
-        String resultadoLabel;
-        String textoResultado = lblResultado.getText().trim();
-        Double resta = calcular(textoResultado);
-        resultadoLabel = formatearResultado(resta);
-        return resultadoLabel;
-    }
-
-    public String multiplicaCalculo(Label lblResultado) {
-        String resultadoLabel;
-        String textoResultado = lblResultado.getText().trim();
-        Double multiplicacion = calcular(textoResultado);
-        resultadoLabel = formatearResultado(multiplicacion);
-        return resultadoLabel;
-    }
-
-    public String divideCalculo(Label lblResultado) {
-        String resultadoLabel;
-        String textoResultado = lblResultado.getText().trim();
-        Double division = calcular(textoResultado);
-        resultadoLabel = formatearResultado(division);
+        Double calculo = calcular(textoResultado);
+        resultadoLabel = formatearResultado(calculo);
         return resultadoLabel;
     }
 
     //Método calcular que usaremos para poder controlar la lógica necesaria a la hora de realizar las operaciones
     private Double calcular(String texto) {
+        // Si el texto contiene paréntesis, encuentra y evalúa el contenido más interno primero
+        int startIndex = texto.lastIndexOf('(');
+        if (startIndex != -1) {
+            int endIndex = texto.indexOf(')', startIndex);
+            if (endIndex != -1) {
+                String dentroParentesis = texto.substring(startIndex + 1, endIndex);
+                Double resultadoDentro = calcular(dentroParentesis);
+                texto = texto.substring(0, startIndex) + resultadoDentro.toString() + texto.substring(endIndex + 1);
+                return calcular(texto);  // Llama recursivamente para evaluar el texto con el resultado
+            }
+        }
+
         String[] partes = texto.split("\\s+");
         Double resultado = (double) 0;
         Double numTemporal = (double) 0;
@@ -69,16 +55,16 @@ public class CalculadoraService {
     }
 
     private String formatearResultado(double resultado) {
-        // Verifica si el resultado es un número entero o no
-        if (resultado == (int) resultado) {
+        // Redondea el resultado a dos decimales
+        double roundedResult = Math.round(resultado * 100.0) / 100.0;
+
+        // Verifica si el resultado redondeado es un número entero
+        if (roundedResult == (int) roundedResult) {
             // Si es un número entero, lo convierte a una cadena de texto sin decimales
-            return String.valueOf((int) resultado);
+            return String.valueOf((int) roundedResult);
         } else {
-            // Si es un número decimal, calcula la longitud máxima de decimales entre todos los operandos
-            int maxDecimales = String.valueOf(resultado).split("\\.")[1].length();
-            // Formatea el resultado con la longitud máxima de decimales encontrada
-            // este utiliza el formato del "." también se podria utilizar el método replace para reemplazar las comas por puntos
-            return String.format(Locale.US, "%." + maxDecimales + "f", resultado);
+            // Formatea el resultado con dos decimales
+            return String.format(Locale.US, "%.2f", roundedResult);
         }
     }
 }

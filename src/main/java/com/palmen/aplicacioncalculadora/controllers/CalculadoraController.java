@@ -129,12 +129,8 @@ public class CalculadoraController {
     @FXML
     private void handleBotonIgual() {
         switch (operacionActual) {
-            case "suma" -> lblResultado.setText(calculadoraService.sumaCalculo(lblResultado));
-            case "resta" -> lblResultado.setText(calculadoraService.restaCalculo(lblResultado));
-            case "multiplica" -> lblResultado.setText(calculadoraService.multiplicaCalculo(lblResultado));
-            case "divide" -> lblResultado.setText(calculadoraService.divideCalculo(lblResultado));
+            case "suma", "multiplica", "resta", "divide" -> lblResultado.setText(calculadoraService.calcularOperacion(lblResultado));
         }
-        // Aquí podrías manejar otras operaciones (multiplicación, división, etc.) si es necesario
     }
 
     //Procedimiento para poner los numeros en el visor de la calculadora (lblResultado)

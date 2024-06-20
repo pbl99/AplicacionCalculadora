@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="CalculadoraService -&gt; modifico método calcular para que por defecto sea Double,añado método formatearResultado para trabajar con los decimales y ese método entra en los métodos de los calculos.&#10;&#10;CalculadoraController -&gt; el método hableBotonIgual pasa a ser con Switch y se crea un método para controlar los botonesEspeciales">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/icon.png" afterDir="false" />
+    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="Se elimina la barra de botones por defecto de la ventana y se crea una nueva mas acorde al diseño de la calculadora. Se crea en el controller un procedimiento setStage que se va enlazar al stage principal de CalculadoraApplication para controlar los nuevos botones de minimizar , maximizar etc.&#10;Por último se añade un icono para cambiarselo al de java por defecto.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/palmen/aplicacioncalculadora/services/CalculadoraServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/CalculadoraApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/CalculadoraApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/services/CalculadoraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/services/CalculadoraService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/palmen/aplicacioncalculadora/calculadora-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/palmen/aplicacioncalculadora/calculadora-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,11 @@
   "keyToString": {
     "Application.CalculadoraApplication.executor": "Run",
     "Application.Prueba.executor": "Run",
+    "JUnit.CalculadoraServiceTest.executor": "Run",
+    "JUnit.CalculadoraServiceTest.testCombinacionMultiplicacionDivision.executor": "Run",
+    "JUnit.CalculadoraServiceTest.testFormatearResultado_LongitudDecimales.executor": "Run",
+    "JUnit.CalculadoraServiceTest.testOperacionConParentesis.executor": "Run",
+    "JUnit.CalculadoraServiceTest.testOperacionSinPartentesis.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "ignore.virus.scanning.warn.message": "true",
@@ -71,7 +76,7 @@
       <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\resources\com\palmen\aplicacioncalculadora" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CalculadoraApplication">
+  <component name="RunManager" selected="JUnit.CalculadoraServiceTest">
     <configuration name="CalculadoraApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.CalculadoraApplication" />
       <module name="AplicacionCalculadora" />
@@ -85,51 +90,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.aplicacioncalculadora.HelloApplication" />
+    <configuration name="CalculadoraServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AplicacionCalculadora" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.aplicacioncalculadora.*" />
+          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.palmen.aplicacioncalculadora.services" />
+      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.services.CalculadoraServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.Prueba" />
+    <configuration name="CalculadoraServiceTest.testCombinacionMultiplicacionDivision" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AplicacionCalculadora" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.*" />
+          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.palmen.aplicacioncalculadora.services" />
+      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.services.CalculadoraServiceTest" />
+      <option name="METHOD_NAME" value="testCombinacionMultiplicacionDivision" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.palmen.aplicacioncalculadora.HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.HelloApplication" />
+    <configuration name="CalculadoraServiceTest.testFormatearResultado_LongitudDecimales" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AplicacionCalculadora" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.controllers.*" />
+          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.palmen.aplicacioncalculadora.services" />
+      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.services.CalculadoraServiceTest" />
+      <option name="METHOD_NAME" value="testFormatearResultado_LongitudDecimales" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculadoraServiceTest.testOperacionSinPartentesis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AplicacionCalculadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.palmen.aplicacioncalculadora.services" />
+      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.services.CalculadoraServiceTest" />
+      <option name="METHOD_NAME" value="testOperacionSinPartentesis" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalculadoraServiceTest" />
         <item itemvalue="Application.CalculadoraApplication" />
-        <item itemvalue="Application.Prueba" />
-        <item itemvalue="Application.com.palmen.aplicacioncalculadora.HelloApplication" />
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="JUnit.CalculadoraServiceTest.testOperacionSinPartentesis" />
+        <item itemvalue="JUnit.CalculadoraServiceTest.testCombinacionMultiplicacionDivision" />
+        <item itemvalue="JUnit.CalculadoraServiceTest.testFormatearResultado_LongitudDecimales" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714899365435</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Se elimina la barra de botones por defecto de la ventana y se crea una nueva mas acorde al diseño de la calculadora. Se crea en el controller un procedimiento setStage que se va enlazar al stage principal de CalculadoraApplication para controlar los nuevos botones de minimizar , maximizar etc.&#10;Por último se añade un icono para cambiarselo al de java por defecto.">
+      <option name="closed" value="true" />
+      <created>1716800852870</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716800852870</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,17 +249,7 @@
     <MESSAGE value="Añado los métodos nuevos al CalculadoraService para controlar la lógica de las operaciones matemáticas de momento solo se ha implementado suma y resta, y se añade manejadores de botones al controller sustituyendo al método calculos anterior." />
     <MESSAGE value="Añado los métodos para multiplicar y dividir a la calculadora service y en el controller los manejadores de sus respectivos botones" />
     <MESSAGE value="CalculadoraService -&gt; modifico método calcular para que por defecto sea Double,añado método formatearResultado para trabajar con los decimales y ese método entra en los métodos de los calculos.&#10;&#10;CalculadoraController -&gt; el método hableBotonIgual pasa a ser con Switch y se crea un método para controlar los botonesEspeciales" />
-    <option name="LAST_COMMIT_MESSAGE" value="CalculadoraService -&gt; modifico método calcular para que por defecto sea Double,añado método formatearResultado para trabajar con los decimales y ese método entra en los métodos de los calculos.&#10;&#10;CalculadoraController -&gt; el método hableBotonIgual pasa a ser con Switch y se crea un método para controlar los botonesEspeciales" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java</url>
-          <line>141</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Se elimina la barra de botones por defecto de la ventana y se crea una nueva mas acorde al diseño de la calculadora. Se crea en el controller un procedimiento setStage que se va enlazar al stage principal de CalculadoraApplication para controlar los nuevos botones de minimizar , maximizar etc.&#10;Por último se añade un icono para cambiarselo al de java por defecto." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se elimina la barra de botones por defecto de la ventana y se crea una nueva mas acorde al diseño de la calculadora. Se crea en el controller un procedimiento setStage que se va enlazar al stage principal de CalculadoraApplication para controlar los nuevos botones de minimizar , maximizar etc.&#10;Por último se añade un icono para cambiarselo al de java por defecto." />
   </component>
 </project>
