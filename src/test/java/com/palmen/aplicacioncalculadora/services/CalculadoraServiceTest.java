@@ -55,12 +55,58 @@ public class CalculadoraServiceTest {
 
     @Test
     // Procedimiento de combinación de multiplicación y división
-    public void testCombinacionMultiplicacionDivision(){
+    public void testCombinacionMultiplicacionDivision() {
         Label lblResultado = new Label("10 x 5 ÷ 2");
 
         String resultado = calculadoraService.calcularOperacion(lblResultado);
         assertEquals("25", resultado);
 
+    }
+
+    @Test
+    // Procedimiento de combinación de multiplicación y división
+    public void testMultiplicacionSignosNegativos() {
+        Label lblResultado = new Label("-10 x -5");
+
+        String resultado = calculadoraService.calcularOperacion(lblResultado);
+        assertEquals("50", resultado);
+
+    }
+
+    @Test
+    // Procedimiento de combinación de multiplicación y división
+    public void testPorcentajes() {
+        Label lblResultado = new Label("5 % 100");
+
+        String resultado = calculadoraService.calcularOperacion(lblResultado);
+        assertEquals("5", resultado);
+
+    }
+
+    @Test
+    public void testSignosNegativosParentesis(){
+        Label lblResultado = new Label("-5 - (-5)");
+
+        String resultado = calculadoraService.calcularOperacion(lblResultado);
+        assertEquals("0", resultado);
+    }
+
+    @Test
+    public void testSignosNegativosSinParentesis(){
+        Label lblResultado = new Label("-5 - -5");
+
+        String resultado = calculadoraService.calcularOperacion(lblResultado);
+        assertEquals("0", resultado);
+    }
+
+    @Test
+    /*Este test para estar bien tiene que tirar el error numberformatexception que se ha creado en el service expresamente para controlar
+    este tipo de caso*/
+    public void testExpresionErroneas(){
+        Label lblResultado = new Label("5 + 5 +");
+
+        String resultado = calculadoraService.calcularOperacion(lblResultado);
+        assertEquals("10", resultado);
     }
 
 }

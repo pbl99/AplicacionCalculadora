@@ -7,7 +7,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -128,10 +127,23 @@ public class CalculadoraController {
     // Método para realizar la operación cuando se presiona el botón igual
     @FXML
     private void handleBotonIgual() {
-        switch (operacionActual) {
-            case "suma", "multiplica", "resta", "divide" -> lblResultado.setText(calculadoraService.calcularOperacion(lblResultado));
+       /* String textoActual = lblResultado.getText().trim();
+        // Verificar el último carácter antes de realizar cualquier cálculo
+        char ultimoCaracter = textoActual.charAt(textoActual.length() - 1);
+        if (ultimoCaracter == '+' || ultimoCaracter == '-' || ultimoCaracter == '*' || ultimoCaracter == '/' || ultimoCaracter == '%') {
+            lblResultado.setText("ERROR");
+        } else { */
+        try {
+            switch (operacionActual) {
+                case "suma", "multiplica", "resta", "divide" ->
+                        lblResultado.setText(calculadoraService.calcularOperacion(lblResultado));
+            }
+
+        } catch (NumberFormatException ex) {
+            lblResultado.setText("ERROR");
         }
     }
+
 
     //Procedimiento para poner los numeros en el visor de la calculadora (lblResultado)
     public void ponerNumeros() {
@@ -155,35 +167,58 @@ public class CalculadoraController {
 
     //Procedimiento para poner los operadores en el visor de la calculadora (lblResultado)
     public void controlarBotonesOperadores() {
-        ArrayList<Button> botones = new ArrayList<>(Arrays.asList(btnDivision, btnMultiplicacion, btnResta, btnSuma));
+        ArrayList<Button> botones = new ArrayList<>(Arrays.asList(btnDivision, btnMultiplicacion, btnResta, btnSuma, btnPorcentaje));
 
         for (Button boton : botones) {
             boton.setOnMouseClicked(e -> {
                 String operador = boton.getText();
                 String textoActual = lblResultado.getText();
 
-                // Verifica si el texto actual es un operador
-                if (textoActual.equals("÷") || textoActual.equals("x") || textoActual.equals("-") || textoActual.equals("+")) {
-                    lblResultado.setText(operador);
+
+                // Verifica el último carácter del texto actual
+                if (!textoActual.isEmpty()) {
+                    char ultimoCaracter = textoActual.charAt(textoActual.length() - 1);
+
+                    // Si el último carácter es un número o un paréntesis cerrado, agregar espacio antes de operador
+                    if (Character.isDigit(ultimoCaracter) || ultimoCaracter == ')') {
+                        lblResultado.setText(textoActual + " " + operador + " ");
+                    } else if (ultimoCaracter == '(') {
+                        // Si el último carácter es un paréntesis abierto, agregar operador directamente
+                        lblResultado.setText(textoActual + operador);
+                    } else if (ultimoCaracter == '-' && (textoActual.length() == 1 || !Character.isDigit(textoActual.charAt(textoActual.length() - 2)))) {
+                        // Si el último carácter es un signo menos y es el primer carácter o no hay un número precedente
+                        lblResultado.setText(textoActual.substring(0, textoActual.length() - 1) + operador);
+                    } else {
+                        // En cualquier otro caso, agregar operador directamente
+                        lblResultado.setText(textoActual + operador);
+                    }
                 } else {
-                    lblResultado.setText(textoActual + " " + operador + " ");
+                    // Si no hay texto actual, agregar operador directamente
+                    lblResultado.setText(operador);
                 }
+                if (textoActual.equals("0")) {
+                    lblResultado.setText(operador);
+                }
+
             });
         }
     }
 
     public void controlarBotonesEspeciales() {
-        ArrayList<Button> botones = new ArrayList<>(Arrays.asList(btnPunto, btnPorcentaje, btnParentesisAbierto, btnParentesisCerrado));
+        ArrayList<Button> botones = new ArrayList<>(Arrays.asList(btnPunto, btnParentesisAbierto, btnParentesisCerrado));
 
         for (Button boton : botones) {
             boton.setOnMouseClicked(e -> {
                 String btnEspecial = boton.getText();
                 String textoActual = lblResultado.getText();
 
-                if (textoActual.equals(".") || textoActual.equals("%") || textoActual.equals("(") || textoActual.equals(")")) {
+                if (textoActual.equals(".") || textoActual.equals("(") || textoActual.equals(")")) {
                     lblResultado.setText(btnEspecial);
                 } else {
                     lblResultado.setText(textoActual + btnEspecial);
+                }
+                if (textoActual.equals("0")) {
+                    lblResultado.setText(btnEspecial);
                 }
             });
         }

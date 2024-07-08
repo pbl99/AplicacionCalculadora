@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="401.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.palmen.aplicacioncalculadora.controllers.CalculadoraController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="401.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.palmen.aplicacioncalculadora.controllers.CalculadoraController" stylesheets="@../css/styles.css">
     <children>
-      <Label fx:id="lblCerrarApp" layoutX="379.0" layoutY="-4.0" prefHeight="26.0" prefWidth="16.0" style="-fx-min-height: 0; -fx-cursor: hand;" text="X" textFill="#9588fc">
+      <Label fx:id="lblCerrarApp" layoutX="379.0" layoutY="-4.0" prefHeight="26.0" prefWidth="16.0" text="X" styleClass="label-primary">
          <font>
             <Font name="Arial Black" size="20.0" />
          </font>
@@ -29,27 +29,27 @@
         </HBox>
         <VBox layoutY="150.0" prefHeight="200.0" prefWidth="100.0">
             <children>
-                <Button fx:id="btnParentesisAbierto" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="(" textFill="#9588fc">
+                <Button fx:id="btnParentesisAbierto" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="(" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero7" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="7" textFill="#9588fc">
+                <Button fx:id="btnNumero7" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="7" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero4" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="4" textFill="#9588fc">
+                <Button fx:id="btnNumero4" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="4" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero1" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="1" textFill="#9588fc">
+                <Button fx:id="btnNumero1" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="1" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="0" textFill="#9588fc">
+                <Button fx:id="btnNumero0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="0" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
@@ -58,27 +58,27 @@
         </VBox>
         <VBox layoutX="100.0" layoutY="150.0" prefHeight="200.0" prefWidth="100.0">
             <children>
-                <Button fx:id="btnParentesisCerrado" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text=")" textFill="#9588fc">
+                <Button fx:id="btnParentesisCerrado" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text=")" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero8" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="8" textFill="#9588fc">
+                <Button fx:id="btnNumero8" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="8" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero5" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="5" textFill="#9588fc">
+                <Button fx:id="btnNumero5" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="5" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero2" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="2" textFill="#9588fc">
+                <Button fx:id="btnNumero2" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="2" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnPunto" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="." textFill="#9588fc">
+                <Button fx:id="btnPunto" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="." styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
@@ -87,27 +87,27 @@
         </VBox>
         <VBox layoutX="200.0" layoutY="150.0" prefHeight="200.0" prefWidth="100.0">
             <children>
-                <Button fx:id="btnPorcentaje" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="\%" textFill="#9588fc">
+                <Button fx:id="btnPorcentaje" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="\%" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero9" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="9" textFill="#9588fc">
+                <Button fx:id="btnNumero9" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="9" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero6" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="6" textFill="#9588fc">
+                <Button fx:id="btnNumero6" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="6" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnNumero3" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="3" textFill="#9588fc">
+                <Button fx:id="btnNumero3" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="3" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnIgualResultado" mnemonicParsing="false" onAction="#handleBotonIgual" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="=" textFill="#9588fc">
+                <Button fx:id="btnIgualResultado" mnemonicParsing="false" onAction="#handleBotonIgual" prefHeight="26.0" prefWidth="74.0" text="=" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
@@ -116,34 +116,34 @@
         </VBox>
         <VBox layoutX="300.0" layoutY="150.0" prefHeight="200.0" prefWidth="100.0">
             <children>
-                <Button fx:id="btnBorrar" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="CE" textFill="#9588fc">
+                <Button fx:id="btnBorrar" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="CE" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnDivision" mnemonicParsing="false" onAction="#handleBotonDivide" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="÷" textFill="#9588fc">
+                <Button fx:id="btnDivision" mnemonicParsing="false" onAction="#handleBotonDivide" prefHeight="26.0" prefWidth="74.0" text="÷" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnMultiplicacion" mnemonicParsing="false" onAction="#handleBotonMultiplica" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="x" textFill="#9588fc">
+                <Button fx:id="btnMultiplicacion" mnemonicParsing="false" onAction="#handleBotonMultiplica" prefHeight="26.0" prefWidth="74.0" text="x" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnResta" mnemonicParsing="false" onAction="#handleBotonResta" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="-" textFill="#9588fc">
+                <Button fx:id="btnResta" mnemonicParsing="false" onAction="#handleBotonResta" prefHeight="26.0" prefWidth="74.0" text="-" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="btnSuma" mnemonicParsing="false" onAction="#handleBotonSuma" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: #566064;" text="+" textFill="#9588fc">
+                <Button fx:id="btnSuma" mnemonicParsing="false" onAction="#handleBotonSuma" prefHeight="26.0" prefWidth="74.0" text="+" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
                 </Button>
             </children>
         </VBox>
-      <Label fx:id="lblMinimizarApp" layoutX="359.0" layoutY="10.0" prefHeight="7.0" prefWidth="12.0" style="-fx-min-height: 0; -fx-cursor: hand;" text="-" textFill="#9588fc">
+      <Label fx:id="lblMinimizarApp" layoutX="359.0" layoutY="10.0" prefHeight="7.0" prefWidth="12.0" text="-" styleClass="label-primary">
          <font>
             <Font name="Arial Black" size="36.0" />
          </font>

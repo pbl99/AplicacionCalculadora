@@ -22,7 +22,7 @@ public class CalculadoraApplication extends Application {
         stage.initStyle(StageStyle.UNDECORATED);
 
         //Imagen para el icono
-        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/icon.png")));
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/palmen/img/icon.png")));
         stage.getIcons().add(image);
 
         // Pasar la referencia del Stage al controlador

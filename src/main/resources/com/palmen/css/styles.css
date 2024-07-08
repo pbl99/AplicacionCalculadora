@@ -1,0 +1,22 @@
+.button-primary {
+    -fx-background-color: #566064;
+    -fx-text-fill: #9588fc;
+    -fx-cursor: hand;
+}
+
+.button-primary:hover {
+    -fx-background-color: #4a536b;
+}
+
+.button-primary:pressed {
+    -fx-background-color: #3e455b;
+}
+
+.label-primary {
+    -fx-text-fill: #9588fc;
+    -fx-cursor: hand;
+}
+
+.label-primary:hover {
+    -fx-text-fill: red;
+}
