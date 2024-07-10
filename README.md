@@ -2,7 +2,7 @@
 
 Aplicación que simula una calculadora
 
-![Captura de pantalla de la calculadora](images/calculadora.png)
+![Captura de pantalla de la calculadora](src/main/resources/com/palmen/img/calculadora.png)
 
 ## Descripción
 
