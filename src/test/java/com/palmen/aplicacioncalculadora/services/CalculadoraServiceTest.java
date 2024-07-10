@@ -109,4 +109,22 @@ public class CalculadoraServiceTest {
         assertEquals("10", resultado);
     }
 
+    @Test
+    //Tiene que dar error por múltiples puntos
+    public void testExpresionErroneas2(){
+        Label lblResultado = new Label("5..2 + 5");
+
+        String resultado = calculadoraService.calcularOperacion(lblResultado);
+        assertEquals("10", resultado);
+    }
+
+    @Test
+    //Tiene que dar error no puede haber un punto al principio
+    public void testExpresionesConPunto(){
+        Label lblResultado = new Label(".25 + 2");
+
+        String resultado = calculadoraService.calcularOperacion(lblResultado);
+        assertEquals("10", resultado);
+    }
+
 }

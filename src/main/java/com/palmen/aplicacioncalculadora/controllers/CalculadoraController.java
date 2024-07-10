@@ -124,26 +124,37 @@ public class CalculadoraController {
         operacionActual = "divide";
     }
 
-    // Método para realizar la operación cuando se presiona el botón igual
     @FXML
-    private void handleBotonIgual() {
-       /* String textoActual = lblResultado.getText().trim();
-        // Verificar el último carácter antes de realizar cualquier cálculo
-        char ultimoCaracter = textoActual.charAt(textoActual.length() - 1);
-        if (ultimoCaracter == '+' || ultimoCaracter == '-' || ultimoCaracter == '*' || ultimoCaracter == '/' || ultimoCaracter == '%') {
-            lblResultado.setText("ERROR");
-        } else { */
-        try {
-            switch (operacionActual) {
-                case "suma", "multiplica", "resta", "divide" ->
-                        lblResultado.setText(calculadoraService.calcularOperacion(lblResultado));
-            }
-
-        } catch (NumberFormatException ex) {
-            lblResultado.setText("ERROR");
-        }
+    private void handleBotonPorcentaje(){
+        operacionActual = "porcentaje";
     }
 
+    private boolean esCaracterEspecial(char c) {
+        return c == '.' || c == '(' || c == ')' || c == '+' || c == '-' || c == '*' || c == '/' || c == '%';
+    }
+
+    @FXML
+    private void handleBotonIgual() {
+        String textoActual = lblResultado.getText().trim();
+
+        // Verificar si los últimos dos caracteres son especiales o si el último es un operador o punto
+        char ultimoCaracter = textoActual.charAt(textoActual.length() - 1);
+        char penultimoCaracter = textoActual.length() > 1 ? textoActual.charAt(textoActual.length() - 2) : ' ';
+
+        if (esCaracterEspecial(ultimoCaracter) && esCaracterEspecial(penultimoCaracter)) {
+            lblResultado.setText("ERROR");
+        } else {
+            try {
+                switch (operacionActual) {
+                    case "suma", "multiplica", "resta", "divide", "porcentaje" ->
+                            lblResultado.setText(calculadoraService.calcularOperacion(lblResultado));
+                }
+
+            } catch (NumberFormatException | StringIndexOutOfBoundsException ex) {
+                lblResultado.setText("ERROR");
+            }
+        }
+    }
 
     //Procedimiento para poner los numeros en el visor de la calculadora (lblResultado)
     public void ponerNumeros() {
@@ -156,7 +167,7 @@ public class CalculadoraController {
                 String textoActual = lblResultado.getText();
 
                 // Verifica si el texto actual es "0" y lo reemplaza por el número
-                if (textoActual.equals("0")) {
+                if (textoActual.equals("0") || textoActual.equals("ERROR")) {
                     lblResultado.setText(numero);
                 } else {
                     lblResultado.setText(textoActual + numero);
@@ -196,7 +207,7 @@ public class CalculadoraController {
                     // Si no hay texto actual, agregar operador directamente
                     lblResultado.setText(operador);
                 }
-                if (textoActual.equals("0")) {
+                if (textoActual.equals("0") || textoActual.equals("ERROR")) {
                     lblResultado.setText(operador);
                 }
 
@@ -217,8 +228,12 @@ public class CalculadoraController {
                 } else {
                     lblResultado.setText(textoActual + btnEspecial);
                 }
-                if (textoActual.equals("0")) {
-                    lblResultado.setText(btnEspecial);
+                if (textoActual.equals("0") || textoActual.equals("ERROR")) {
+                    if(boton.equals(btnParentesisAbierto)){
+                        lblResultado.setText(btnEspecial);
+                    }else if(boton.equals(btnParentesisCerrado)){
+                        lblResultado.setText(btnEspecial);
+                    }
                 }
             });
         }

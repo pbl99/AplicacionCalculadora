@@ -18,7 +18,8 @@ public class CalculadoraService {
     private Double calcular(String texto) {
         // Verificar si el último carácter es un operador, un punto o un paréntesis
         char ultimoCaracter = texto.charAt(texto.length() - 1);
-        if (ultimoCaracter == '+' || ultimoCaracter == '-' || ultimoCaracter == 'x' || ultimoCaracter == '÷' || ultimoCaracter == '%' || ultimoCaracter == '.') {
+        if (ultimoCaracter == '+' || ultimoCaracter == '-' || ultimoCaracter == 'x' || ultimoCaracter == '÷' || ultimoCaracter == '%' || ultimoCaracter == '.'
+                || ultimoCaracter == '(' || ultimoCaracter == ' ') {
             throw new NumberFormatException("Expresión inválida: termina con un operador o punto.");
         }
 
@@ -41,6 +42,9 @@ public class CalculadoraService {
         char operacion = '+';
 
         for (String parte : partes) {
+            if (parte.charAt(0) == '.') {
+                throw new NumberFormatException("Expresión inválida: no puede haber un punto al principio.");
+            }
             if (parte.equals("+") || parte.equals("-") || parte.equals("x") || parte.equals("÷") || parte.equals("%")) {
                 operacion = parte.charAt(0);
             } else {

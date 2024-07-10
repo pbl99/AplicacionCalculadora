@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="Se mejora la funcionalidad de la clase Service al eliminar varios métodos redundantes para cada operación. Además, se añade funcionalidad para manejar la jerarquía de operaciones con paréntesis. También se implementa JUnit para realizar pruebas.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/palmen/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/palmen/img/calculadora.png" afterDir="false" />
+    <list default="true" id="765a860f-43d9-4e2c-a320-3184110da728" name="Changes" comment="Se añade el styles.css para darle una mejor apariencia, se modifican algunos métodos en el service y en el controller para controlar algunos casos de error de operaciones.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/CalculadoraApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/CalculadoraApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/controllers/CalculadoraController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/services/CalculadoraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/palmen/aplicacioncalculadora/services/CalculadoraService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/palmen/aplicacioncalculadora/calculadora-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/palmen/aplicacioncalculadora/calculadora-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/img/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/palmen/img/icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/palmen/aplicacioncalculadora/services/CalculadoraServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/palmen/aplicacioncalculadora/services/CalculadoraServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +58,8 @@
     "JUnit.CalculadoraServiceTest.testCombinacionMultiplicacionDivision.executor": "Run",
     "JUnit.CalculadoraServiceTest.testExpresionErronea.executor": "Run",
     "JUnit.CalculadoraServiceTest.testExpresionErroneas.executor": "Run",
+    "JUnit.CalculadoraServiceTest.testExpresionErroneas2.executor": "Run",
+    "JUnit.CalculadoraServiceTest.testExpresionesConPunto.executor": "Run",
     "JUnit.CalculadoraServiceTest.testFormatearResultado_LongitudDecimales.executor": "Run",
     "JUnit.CalculadoraServiceTest.testMultiplicacionSignosNegativos.executor": "Run",
     "JUnit.CalculadoraServiceTest.testOperacionConParentesis.executor": "Run",
@@ -89,7 +87,7 @@
       <recent name="C:\Users\Pablo\Desktop\JavaFX\AplicacionCalculadora\src\main\java\com\palmen\aplicacioncalculadora" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalculadoraServiceTest.testExpresionErroneas">
+  <component name="RunManager" selected="Application.CalculadoraApplication">
     <configuration name="CalculadoraApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.CalculadoraApplication" />
       <module name="AplicacionCalculadora" />
@@ -99,37 +97,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculadoraServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AplicacionCalculadora" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.palmen.aplicacioncalculadora.services" />
-      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.services.CalculadoraServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculadoraServiceTest.testExpresionErronea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AplicacionCalculadora" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.palmen.aplicacioncalculadora.services" />
-      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.services.CalculadoraServiceTest" />
-      <option name="METHOD_NAME" value="testExpresionErronea" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculadoraServiceTest.testSignosNegativosSinParentesis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculadoraServiceTest.testExpresionErroneas2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AplicacionCalculadora" />
       <extension name="coverage">
         <pattern>
@@ -160,7 +127,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.palmen.aplicacioncalculadora.services" />
       <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.services.CalculadoraServiceTest" />
-      <option name="METHOD_NAME" value="testSignosNegativosSinParentesis" />
+      <option name="METHOD_NAME" value="testExpresionErroneas2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculadoraServiceTest.testExpresionesConPunto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AplicacionCalculadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.palmen.aplicacioncalculadora.services" />
+      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.services.CalculadoraServiceTest" />
+      <option name="METHOD_NAME" value="testExpresionesConPunto" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculadoraServiceTest.testPorcentajes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AplicacionCalculadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.palmen.aplicacioncalculadora.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.palmen.aplicacioncalculadora.services" />
+      <option name="MAIN_CLASS_NAME" value="com.palmen.aplicacioncalculadora.services.CalculadoraServiceTest" />
+      <option name="METHOD_NAME" value="testPorcentajes" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalculadoraServiceTest.testExpresionErroneas" />
         <item itemvalue="Application.CalculadoraApplication" />
-        <item itemvalue="JUnit.CalculadoraServiceTest.testExpresionErronea" />
-        <item itemvalue="JUnit.CalculadoraServiceTest.testSignosNegativosSinParentesis" />
-        <item itemvalue="JUnit.CalculadoraServiceTest" />
+        <item itemvalue="JUnit.CalculadoraServiceTest.testExpresionErroneas2" />
+        <item itemvalue="JUnit.CalculadoraServiceTest.testExpresionesConPunto" />
+        <item itemvalue="JUnit.CalculadoraServiceTest.testPorcentajes" />
+        <item itemvalue="JUnit.CalculadoraServiceTest.testExpresionErroneas" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718874336333</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Se añade el styles.css para darle una mejor apariencia, se modifican algunos métodos en el service y en el controller para controlar algunos casos de error de operaciones.">
+      <option name="closed" value="true" />
+      <created>1720448674827</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720448674827</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,6 +279,7 @@
     <MESSAGE value="CalculadoraService -&gt; modifico método calcular para que por defecto sea Double,añado método formatearResultado para trabajar con los decimales y ese método entra en los métodos de los calculos.&#10;&#10;CalculadoraController -&gt; el método hableBotonIgual pasa a ser con Switch y se crea un método para controlar los botonesEspeciales" />
     <MESSAGE value="Se elimina la barra de botones por defecto de la ventana y se crea una nueva mas acorde al diseño de la calculadora. Se crea en el controller un procedimiento setStage que se va enlazar al stage principal de CalculadoraApplication para controlar los nuevos botones de minimizar , maximizar etc.&#10;Por último se añade un icono para cambiarselo al de java por defecto." />
     <MESSAGE value="Se mejora la funcionalidad de la clase Service al eliminar varios métodos redundantes para cada operación. Además, se añade funcionalidad para manejar la jerarquía de operaciones con paréntesis. También se implementa JUnit para realizar pruebas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se mejora la funcionalidad de la clase Service al eliminar varios métodos redundantes para cada operación. Además, se añade funcionalidad para manejar la jerarquía de operaciones con paréntesis. También se implementa JUnit para realizar pruebas." />
+    <MESSAGE value="Se añade el styles.css para darle una mejor apariencia, se modifican algunos métodos en el service y en el controller para controlar algunos casos de error de operaciones." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se añade el styles.css para darle una mejor apariencia, se modifican algunos métodos en el service y en el controller para controlar algunos casos de error de operaciones." />
   </component>
 </project>

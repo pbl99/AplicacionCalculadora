@@ -87,7 +87,7 @@
         </VBox>
         <VBox layoutX="200.0" layoutY="150.0" prefHeight="200.0" prefWidth="100.0">
             <children>
-                <Button fx:id="btnPorcentaje" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="\%" styleClass="button-primary">
+                <Button fx:id="btnPorcentaje" mnemonicParsing="false" onAction="#handleBotonPorcentaje" prefHeight="26.0" prefWidth="74.0" text="\%" styleClass="button-primary">
                     <VBox.margin>
                         <Insets left="15.0" top="10.0" />
                     </VBox.margin>
